@@ -2,6 +2,9 @@
 
 PROJECT START STEPS:
 
+    Important
+    Run sh get-cj.sh to get the database
+
     Pre-requisites:
     1. Java must be installed
     2. Install maven module (https://maven.apache.org/install.html).

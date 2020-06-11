@@ -1,1 +1,4 @@
-wget https://github.com/devjudge/neo4j-sb2.0.9R-j11-maven-in-docker-main
+#!/usr/bin/env bash
+
+wget https://codejudge-artifacts.s3.amazonaws.com/CodeGraph.zip
+unzip CodeGraph.zip
