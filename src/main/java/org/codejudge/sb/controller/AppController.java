@@ -55,4 +55,110 @@ public class AppController {
         return res;
     }
 
+    @GetMapping("/package-of-a-given-classes")
+    public Map<String, List<Map<String, String>>> getPackageOfAGivenClass() {
+        this.neo4jGraph = this.getNeoInstance();
+        String cypherQuery = "";
+        List<GraphResult> results = this.neo4jGraph.getResult(cypherQuery);
+        Map<String, List<Map<String, String>> > res = new HashMap<>();
+        res.put("result", this.neo4jGraph.serialze(results));
+        return res;
+    }
+
+    @GetMapping("/get-all-classes-of-a-package")
+    public Map<String, List<Map<String, String>>> getAllClassesOfAPackage() {
+        this.neo4jGraph = this.getNeoInstance();
+        String cypherQuery = "";
+        List<GraphResult> results = this.neo4jGraph.getResult(cypherQuery);
+        Map<String, List<Map<String, String>> > res = new HashMap<>();
+        res.put("result", this.neo4jGraph.serialze(results));
+        return res;
+    }
+
+    @GetMapping("/get-methods-class-both-inherited-and-declared")
+    public Map<String, List<Map<String, String>>> getMethodInheritAndDeclared() {
+        this.neo4jGraph = this.getNeoInstance();
+        String cypherQuery = "";
+        List<GraphResult> results = this.neo4jGraph.getResult(cypherQuery);
+        Map<String, List<Map<String, String>> > res = new HashMap<>();
+        res.put("result", this.neo4jGraph.serialze(results));
+        return res;
+    }
+
+
+    @GetMapping("/get-transitive-closure-of-types")
+    public Map<String, List<Map<String, String>>> getTransitiveClosureOfTypes() {
+        this.neo4jGraph = this.getNeoInstance();
+        String cypherQuery = "";
+        List<GraphResult> results = this.neo4jGraph.getResult(cypherQuery);
+        Map<String, List<Map<String, String>> > res = new HashMap<>();
+        res.put("result", this.neo4jGraph.serialze(results));
+        return res;
+    }
+
+    @GetMapping("/get-null-literal-value")
+    public Map<String, List<Map<String, String>>> getNullLiteralValue() {
+        this.neo4jGraph = this.getNeoInstance();
+        String cypherQuery = "";
+        List<GraphResult> results = this.neo4jGraph.getResult(cypherQuery);
+        Map<String, List<Map<String, String>> > res = new HashMap<>();
+        res.put("result", this.neo4jGraph.serialze(results));
+        return res;
+    }
+
+    @GetMapping("/get-if-statements-where-null")
+    public Map<String, List<Map<String, String>>> getIfStatementWhereNull() {
+        this.neo4jGraph = this.getNeoInstance();
+        String cypherQuery = "";
+        List<GraphResult> results = this.neo4jGraph.getResult(cypherQuery);
+        Map<String, List<Map<String, String>> > res = new HashMap<>();
+        res.put("result", this.neo4jGraph.serialze(results));
+        return res;
+    }
+
+
+    @GetMapping("/get-cyclomatic-complexity-class")
+    public Map<String, List<Map<String, String>>> getCyclomaticComplexityClass() {
+        this.neo4jGraph = this.getNeoInstance();
+        String cypherQuery = "";
+        List<GraphResult> results = this.neo4jGraph.getResult(cypherQuery);
+        Map<String, List<Map<String, String>> > res = new HashMap<>();
+        res.put("result", this.neo4jGraph.serialze(results));
+        return res;
+    }
+
+
+    @GetMapping("/get-all-methods-with-complexity")
+    public Map<String, List<Map<String, String>>> getAllMethodsWithComplexity() {
+        this.neo4jGraph = this.getNeoInstance();
+        String cypherQuery = "";
+        List<GraphResult> results = this.neo4jGraph.getResult(cypherQuery);
+        Map<String, List<Map<String, String>> > res = new HashMap<>();
+        res.put("result", this.neo4jGraph.serialze(results));
+        return res;
+    }
+
+
+    @GetMapping("/get-all-methods-with4-params")
+    public Map<String, List<Map<String, String>>> getAllMethodWithParams() {
+        this.neo4jGraph = this.getNeoInstance();
+        String cypherQuery = "";
+        List<GraphResult> results = this.neo4jGraph.getResult(cypherQuery);
+        Map<String, List<Map<String, String>> > res = new HashMap<>();
+        res.put("result", this.neo4jGraph.serialze(results));
+        return res;
+    }
+
+    @GetMapping("/get-methods-with-50-lines")
+    public Map<String, List<Map<String, String>>> getMethodWith50Lines() {
+        this.neo4jGraph = this.getNeoInstance();
+        String cypherQuery = "";
+        List<GraphResult> results = this.neo4jGraph.getResult(cypherQuery);
+        Map<String, List<Map<String, String>> > res = new HashMap<>();
+        res.put("result", this.neo4jGraph.serialze(results));
+        return res;
+    }
+
+
+
 }
