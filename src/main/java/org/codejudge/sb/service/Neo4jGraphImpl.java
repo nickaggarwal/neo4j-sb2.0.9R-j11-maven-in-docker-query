@@ -83,7 +83,9 @@ public class Neo4jGraphImpl implements Neo4jGraph{
                     if(column.getValue() == null){
                         hashmap.put(column.getKey(),"null");
                     }else{
-                        hashmap.put(column.getKey().replace(".", "_"), column.getValue().toString());
+                        hashmap.put(column.getKey().replace(".", "_").replace(" ", "_")
+                                .replace("(", "").replace(")", ""), column.getValue().toString());
+
                     }
 
                 }
