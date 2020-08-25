@@ -1,6 +1,6 @@
 FROM maven:3.6.3-jdk-11 AS MAVEN_TOOL_CHAIN
 
-RUN apt-get install --assume-yes openssl curl
+RUN apt-get install --assume-yes openssl curl unzip curl
 
 # Pre build commands
 USER root
@@ -18,6 +18,7 @@ RUN sh build.sh
 
 # Add extra docker commands here (if any)...
 
+COPY get-cj.sh /tmp/get-cj.sh
 RUN chmod 775 ./get-cj.sh
 RUN sh get-cj.sh
 
